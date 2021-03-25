@@ -21,6 +21,14 @@ export function power(x, y) {
     return x ** y;
 }
 
+export function convertTemp(temp, sym) {
+    if (sym === 'f') {
+        return (temp - 32) * .555555;
+    } else if (sym === 'c') {
+        return (temp * 1.8) + 32;
+    }
+}
+
 export function toNumber(el) {
     if (el.value) {
         return Number(el.value);

@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, sub, multiply, toNumber, divide, power } from '../calculator.js';
+import { add, sub, multiply, toNumber, divide, power, convertTemp } from '../calculator.js';
 
 const test = QUnit.test;
 
@@ -93,6 +93,22 @@ test('power function test', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = power(x, y);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('convertTemp function test', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const x = 0;
+    const y = 'c';
+    const expected = 32;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = convertTemp(x, y);
 
     //Expect
     // Make assertions about what is expected versus the actual result

@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { add, sub, multiply, divide, toNumber, power } from './calculator.js';
+import { add, sub, multiply, divide, toNumber, power, convertTemp } from './calculator.js';
 
 const calcs = [
     {
@@ -38,7 +38,14 @@ const calcs = [
         oper: power
     }
 ];
-
+// {
+//     id1: 'temp',
+//     id2:  'symbol',
+//     button:  'equal-convert',
+//     output: 'outta',
+//     oper: convertTemp
+// }
+    
 function setup(id1, id2, button, output, oper) {
     // initialize state
     const num1 = document.getElementById(id1);
