@@ -24,7 +24,7 @@ export function toNumber(el) {
     return 0;
 }
 
-export function setup(id1, id2, button, output, op) {
+export function setup(id1, id2, button, output, oper) {
     // initialize state
     const num1 = document.getElementById(id1);
     const num2 = document.getElementById(id2);
@@ -32,6 +32,6 @@ export function setup(id1, id2, button, output, op) {
     const out = document.getElementById(output);
     // set event listeners to update state and DOM
     action.addEventListener('click', () => {
-        out.textContent = op(toNumber(num1), toNumber(num2));
+        out.textContent = oper(toNumber(num1), toNumber(num2));
     });
 }
