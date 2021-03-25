@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, sub, multiply, toNumber, divide } from '../calculator.js';
+import { add, sub, multiply, toNumber, divide, power } from '../calculator.js';
 
 const test = QUnit.test;
 
@@ -77,6 +77,22 @@ test('0 divided by 0 returns 0', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = divide(x, y);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('power function test', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const x = 4;
+    const y = 2;
+    const expected = 16;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = power(x, y);
 
     //Expect
     // Make assertions about what is expected versus the actual result

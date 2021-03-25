@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { add, sub, multiply, divide, setup } from './calculator.js';
+import { add, sub, multiply, divide, toNumber, power } from './calculator.js';
 
 const calcs = [
     {
@@ -29,8 +29,27 @@ const calcs = [
         button:  'equal-divide',
         output: 'quotient',
         oper: divide
+    },
+    {
+        id1: 'first-pow',
+        id2:  'second-pow',
+        button:  'equal-power',
+        output: 'expo',
+        oper: power
     }
 ];
+
+function setup(id1, id2, button, output, oper) {
+    // initialize state
+    const num1 = document.getElementById(id1);
+    const num2 = document.getElementById(id2);
+    const action = document.getElementById(button);
+    const out = document.getElementById(output);
+    // set event listeners to update state and DOM
+    action.addEventListener('click', () => {
+        out.textContent = oper(toNumber(num1), toNumber(num2));
+    });
+}
 
 for (let i = 0; i < calcs.length; i++) {
     const op = calcs[i];
