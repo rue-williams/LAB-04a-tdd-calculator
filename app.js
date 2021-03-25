@@ -22,4 +22,24 @@ const differenceOutput = document.getElementById('difference');
 subButton.addEventListener('click', () => {
     differenceOutput.textContent = add(toNumber(firstSub), toNumber(secondSub));
 });
+// initialize state
+const firstMult = document.getElementById('first-mult');
+const secondMult = document.getElementById('second-mult');
+const productButton = document.getElementById('equal-product');
+const productOutput = document.getElementById('product');
+
+// set event listeners to update state and DOM
+productButton.addEventListener('click', () => {
+    productOutput.textContent = add(toNumber(firstMult), toNumber(secondMult));
+});
+// initialize state
+const firstDiv = document.getElementById('first-div');
+const secondDiv = document.getElementById('second-div');
+const divButton = document.getElementById('equal-divide');
+const quotientOutput = document.getElementById('quotient');
+
+// set event listeners to update state and DOM
+divButton.addEventListener('click', () => {
+    quotientOutput.textContent = add(toNumber(firstDiv), toNumber(secondDiv));
+});
 
